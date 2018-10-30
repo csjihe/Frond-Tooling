@@ -7,6 +7,7 @@ var less = require('gulp-less');
 var minifyCSS = require('gulp-cssnano');
 var prefix = require('gulp-autoprefixer');
 var bSync = require('browser-sync');
+var wiredep = require('wiredep').stream;
 
 /*gulp.task('scripts', function () {
     return gulp.src('app/scripts/!**!/!*.js')
@@ -52,25 +53,32 @@ gulp.task('scripts',
      done();
  });
 
+ gulp.task('deps', function() {
+     return gulp.src('app/**/*.html')
+         .pipe(wiredep())
+         .pipe(gulp.dest('dist'));
+ })
+
 gulp.task('default',
     gulp.series('clean',
-        gulp.parallel('styles', 'scripts'),
+        gulp.parallel('styles', 'scripts', 'deps'),
         'server',
         function watcher(done) {
         gulp.watch(
-            ['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'],
+            ['app/scripts/!**!/!*.js', '!app/scripts/vendor/!**!/!*.js'],
             gulp.parallel('scripts')
         );
         gulp.watch(
-            'app/styles/**/*.less',
+            'app/styles/!**!/!*.less',
             gulp.parallel('styles')
         );
         gulp.watch(
-            'dist/**/*',
+            'dist/!**!/!*',
             bSync.reload
         );
         done();
         }
     )
 );
+
 
