@@ -1,4 +1,10 @@
 # sample-project-gulp
-The sample project we will use throughout the Gulp chapters
 
-**Important** Take a look at the branches. For each chapter, there's a branch with a solution starting from the previous chapter.
+Practice of front-end tools: **Gulp, Bower and Yeoman.**
+
+Based on instructions from: 
+**https://github.com/frontend-tooling/sample-project-gulp**
+
+
+
+
