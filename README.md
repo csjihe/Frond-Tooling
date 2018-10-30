@@ -1,6 +1,7 @@
-# sample-project-gulp
+# Front End Tool Practice
 
-Practice of front-end tools: **Gulp, Bower and Yeoman.**
+Personal practice for the following front-end development tools:
+**Gulp, Bower and Yeoman.**
 
 Based on instructions from: 
 **https://github.com/frontend-tooling/sample-project-gulp**
