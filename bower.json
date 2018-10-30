@@ -1,0 +1,21 @@
+{
+  "name": "sample-project-gulp",
+  "homepage": "https://github.com/csjihe/Frond-Tooling",
+  "authors": [
+    "Ji He <csjihe@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
